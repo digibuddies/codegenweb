@@ -31,7 +31,7 @@
 
   <!-- Font Awesome Icon -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Merriweather+Sans|Cabin|Oxygen|Acme|Do+Hyeon" rel="stylesheet">
   <style type="text/css">
 
 
@@ -88,7 +88,7 @@
     width:100%;
     color:white;
     font-size: 25px;
-   font-family: 'Cabin', sans-serif;
+   font-family: 'Acme', sans-serif;
 
 
   }
@@ -142,11 +142,26 @@ margin-left: 560px;
     width: 50px; 
   }
   #question{
-    text-align: left;padding-top: 50px;color: black;font-weight: bold;font-size: 20px;font-family: open-sans;
+    text-align: left;padding-top: 50px;color: black;font-weight: bold;font-size: 20px;font-family: ;
     padding-left: 100px;
   }
   #output{
-     text-align: center;padding-top: 50px;color: black;font-weight: bold;font-size: 20px;font-family: vollkorn;
+     text-align: center;padding-top: 50px;color: black;font-weight: bold;font-size: 20px;font-family: ;
+  }
+  .qsample
+  {
+    color: white;
+    font-size: 30px;
+    font-family:helvetica;
+    background-color:rgba(255,255,255,0.3);
+    color: #2471A3;
+    border-radius: 10px;
+    border-width: 2px; 
+    border-color:rgba(255,255,255,0.4) ;
+    margin: 10px 0px
+    ;padding-bottom: 10px;
+    line-height: 2em; 
+    font-family: 'Merriweather Sans', sans-serif;
   }
  
   </style>
@@ -181,7 +196,16 @@ margin-left: 560px;
     <div class="container-fluid">                                          
         <div class="row" >
 
-          <div class=" about col-sm-12">
+
+          <div class="jumbotron col-12 text-center" style="height: 450px;font-size: 40px;color:#2471A3;margin-top:-16px;font-family: 'Do Hyeon',sans-serif;">
+            CodeEngine provides you with error free program code and corresponding output for your queries.<br>
+            It is extremely easy and fun to use.<br>Just type in your query click on the button and voila!<br>  Coding has never been easier<br>
+           
+            <a class="btn btn-primary btn-lg scroll" href="#about1" id='getresult' style="background-color: #2874A6;color: white">Know More</a>
+          </div>
+
+
+          <div class=" about col-sm-12" id="about1">
             <div class=" support jumbotron col-sm-4" style="padding-left: 0px;padding-right: 0px;">
               <h3 class="functions text-center">Functions Supported</h3>
               
@@ -231,7 +255,7 @@ margin-left: 560px;
    
       <div class="row">
 
-         <div class="well" style="color: white;font-size: 30px;font-family:helvetica;background-color:rgba(255,255,255,0.3);color: black;border-radius: 10px;border-width: 2px; border-color:rgba(255,255,255,0.4) ;margin: 10px 0px;padding-bottom: 10px;line-height: 2em; ">Here is an example query and its output for reference</div><br><br>
+         <div class="well qsample">Here is an example query and its output for reference</div><br><br>
 
   <!--  <div class="col-md-12 col-sm-12 text-center pageno" >   
  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -248,7 +272,7 @@ margin-left: 560px;
      <div class=" col-md-6 col-sm-12"  id="codewindow"> <!--display:none;-->
        
        <div class="card" style="color: white;height: 30px; background-color:black;" >
-             <div class="card-body" style="font-size: 20px;font-weight: bold;">QUERY</div>
+             <div class="card-body" style="font-size: 20px;font-weight: bold;font-family: 'Acme',sans-serif;">QUERY</div>
         </div>  
      
         <div id="question" >
@@ -275,7 +299,7 @@ margin-left: 560px;
      <div class="col-md-6 col-sm-12 text-center" id="opbody">
          
           <div class="card" style="color: white;height: 30px; background-color:black;" >
-             <div class="card-body" style="font-size: 20px;font-weight: bold;">OUTPUT</div>
+             <div class="card-body" style="font-size: 20px;font-weight: bold;font-family: 'Acme',sans-serif;">OUTPUT</div>
              </div>  
            <div id="output">
             Your score<br>
@@ -298,13 +322,7 @@ margin-left: 560px;
         </div>
       </div>
     </section>
-    <script type="text/javascript">
-    $(document).ready(function(){
-    $(".qa1").click(function(){
-        $("#question").load("ques1.txt");
-    });
-});
-    </script>
+   
   
 </body>
 </html>
