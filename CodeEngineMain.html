@@ -39,6 +39,7 @@
 
   <!-- Font Awesome Icon -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
   
   <style type="text/css">                                        <!--internal styling for the 1stpage navigation-->
   	
@@ -133,6 +134,8 @@
     border-style: solid;
     border-left-color:  #1B2631;
     margin-bottom: 100px;
+    font-size: 18px;
+
 }
 #codewindow{
    
@@ -144,7 +147,20 @@
     border-radius: 4px;
     border-style: solid;
     border-right-color:   #1B2631;
+    font-size: 18px;
     
+}
+#code{
+text-align: left;padding-top: 30px;padding-left: 20px;color: black;max-height: 360;
+}
+.card{
+   color: white;
+   height: 30px; 
+   background-color:black;
+}
+.card-body{
+  style="font-size: 20px;
+  font-weight: bold;"
 }
 
   .wrapper { 
@@ -157,11 +173,18 @@
    padding: 10px;
 
 }
+textarea{
+  font-weight: 500;
+  font-size: 100px;
+  color:black;
+  font-family: 'Oxygen',sans-serif;
+}
 body{
   max-height: 800px;
 }
 .logo{
   padding-top: 40px;
+  padding-left: 60px;
 
 }
 </style>
@@ -175,25 +198,15 @@ body{
 <body>
             
    <div id="runcloud-app">         
-  <section class="rc-section rc-hero" style="padding-top: 20px;height: 1220px;max-height: 1170px;">
+  <section class="rc-section rc-hero" style="padding-top: 8px;height: 1220px;max-height: 1170px;">
 
     <div class="rc-stars-1" v-cloak></div>
     <div class="rc-stars-2" v-cloak></div>
     <div class="rc-stars-3" v-cloak></div>
-  <!--  <div class="rc-planet" v-cloak></div>       <!--mars planet image-->
+  
     
     <div class="container">                                          
         <div class="row" >
-        	 <div class="col-xs-6">
-           <!--<a href="index.html"><img src="img/logo.svg" alt="Logo"></a>                   Insert Logo Here-->       
-          </div>
-          
- 
- <!--<div class="col-xs-6 signin text-right navbar-nav" style="padding-right: 0px;">                      //original plain navbar through a links
-          <a href="#">Home</a>&nbsp; &nbsp; &nbsp;<a href="#">Get Started</a>&nbsp; &nbsp;&nbsp;              
-          <a href="#">Help</a>&nbsp; &nbsp; &nbsp;<a href="login.html">Contact</a>&nbsp; &nbsp;&nbsp;
-          <a href="CodeGenSingup.html">SignUp</a>&nbsp; &nbsp; &nbsp;<a href="CodeGenLogin.html">Login</a>
-     </div>    -->
           
 <div class="col-xs-12 col-md-12" style="padding-right: 0px;">
           <nav class="stroke" id="mynav">
@@ -217,23 +230,24 @@ body{
                            
                    <div class="col-sm-8 col-sm-offset-2" style="padding-left: 50px;">
                             
-                            <div id="queryid" class="form-group speech col-centered" style="position: relative;">                                  <!--  speech class for VR-->
-                       <!-- <input id="query" style="position: relative;" type="text" name="name" class="form-control"  placeholder="Enter query" style="width:90%;" />-->
-                       <textarea class="form-control" rows="7" id="query" name="que" placeholder="Enter query"></textarea>
+                      <div id="queryid" class="form-group speech col-centered" style="position: relative;">                               
+                       <textarea class="form-control" rows="7" id="query" name="que" placeholder="Enter query"
+                       style=" font-weight: 500;
+                               font-size: 16px;
+                              color:black;
+                              font-family: 'Oxygen',sans-serif;" >
+    
+                       </textarea>
                         <img style="float: right; width: 50px;margin-top: -50px;position: relative;"     onclick="startDictation()" src="../CodeGen/img/microphone.gif" />
 
-                             </div>
-                        <br>
-                            
 
-                        <div class="col-lg-12 text-left" style="margin-top: 10px;margin-left:2px ;">
-                      <div class="col-xs-12 wow fadeInUp text-center" data-wow-delay="0.5s" >
-                    <a class="btn btn-primary btn-lg " onclick='myfun()' id='getresult' style="background-color: #F1C40F;">Get   Result</a>
-                </div>    
-        </div>               
-
-                  
-                
+                       <div class="col-lg-12 text-left" style="margin-top: 10px;margin-left:2px ;">
+                          <div class="col-xs-12 wow fadeInUp text-center" data-wow-delay="0.5s" >
+                            <a class="btn btn-primary btn-lg " onclick='myfun()' id='getresult' style="background-color: #F1C40F;">Get   Result</a>
+                         </div>    
+                      </div>      
+                   </div>
+           
 </div>
                    
 
@@ -244,12 +258,12 @@ body{
 
  <div class="col-md-6 col-sm-push-6 text-center" id="opbody">
          
-          <div class="card" style="color: white;height: 30px; background-color:black;" >
-             <div class="card-body" style="font-size: 20px;font-weight: bold;">OUTPUT</div>
+          <div class="card">
+             <div class="card-body" >OUTPUT</div>
         </div>  
     
       
-      <div id="output" style="text-align: center;padding-top: 4px;color: black;">
+      <div id="output" style="text-align: center;padding-top: 30px;color: black;">
      
       <!--The output will go here-->  
       
@@ -258,28 +272,17 @@ body{
      </div>
  <div class=" col-md-6 col-sm-pull-6"  id="codewindow"> <!--display:none;-->
        
-       <div class="card" style="color: white;height: 30px; background-color:black;" >
-             <div class="card-body" style="font-size: 20px;font-weight: bold;">CODE</div>
+       <div class="card">
+             <div class="card-body" >CODE</div>
         </div>  
      
-        <div id="code" style="text-align: left;padding-top: 4px;color: black;max-height: 450;">
+        <div id="code">
       
         <!--The output will go here-->  
       
         </div>   
       </div>
            
-       
-         <!--  <button class="btn btn-info btn-lg" onclick="toggle_div('codewindow')">Code</button>   to make div disappear-->
-          <!--<p id="disp" style="float: right;"></p>
-          <button class="btn btn-danger text-center" onclick="toggle_div('code')">Show Code </button>-->
-           
-
-    
-
-
-  
-
 </div>   <!--jumbotron containing query and code-->
 </div>
 </div>
@@ -305,25 +308,20 @@ body{
         <script src="https://cf1.cdn.runcloud.io/js/manifest.js?id=6efcab249d801b22326c"></script>
         <script src="https://cf1.cdn.runcloud.io/js/vendor.js?id=ec0dbca27b7dccac251e"></script>
         <script src="https://cf1.cdn.runcloud.io/js/app.js?id=58483124e56e75cd903e"></script>
-     <!-- scripts of mainpage-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/modernizr-2.7.1.js"></script>
+         <!-- scripts of mainpage-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        
+        <script src="js/wow.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/modernizr-2.7.1.js"></script>
 
 
   
     <script src="js/nlpjs.js"></script>                  
-   
-
   
-   
-    <script src="js/copyquery.js"></script>
-     	 
-       <script type="text/javascript">                                     /*NOT working by importing....make it!!!!!!*/
-         function startDictation() {
+    <script type="text/javascript">                                     
+         function startDictation() {                                            /*speech recog*/
 
       if (window.hasOwnProperty('webkitSpeechRecognition')) {
 
@@ -350,13 +348,13 @@ body{
       }
       
   }
-
-$(document).ready(function() {
+/*----------------------------------------------------------------*/
+$(document).ready(function() {                                       
     $("#getresult").click(function(event){
-        $('html, body').animate({scrollTop: '+395px'}, 800);          /*can scroll by 150px each time using +=395 px.*/
+        $('html, body').animate({scrollTop: '+385px'}, 800);          /*scroll by 150px each time : +=395 px.*/
     });
 });
-
+/*----------------------------------------------------------------*/
 function myfun()                                                     /*nlptestjs.js*/
 {
   var q=document.getElementById('query').value;
@@ -380,25 +378,7 @@ function myfun()                                                     /*nlptestjs
       }
    });  
 }
-$(document).ready(function() { 
 
-    $("#sendAlertText").hide();   
-    $("#emptyAlertText").hide(); 
-
-
-    $("#getresult").submit(function(event) { // here I change click event to submit 
-        event.preventDefault(); //<--------- that prevent page to reload. 
-
-        if (($("#query").val() === "")) {
-            $( "#emptyAlertText" ).fadeIn( "slow" );
-
-        } else {
-            $( "#sendAlertText" ).fadeIn( "slow" );
-
-        }
-    }); // end of event listener
-
-});
 
  
     </script>
