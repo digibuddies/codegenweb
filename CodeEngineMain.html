@@ -157,6 +157,18 @@ body{
 section{
 padding-top: 8px;height: 1220px;max-height: 1170px;background-color: black;
 }
+/*---------------------------------------NEW CSS FOR BACKGROUND--*/
+.allcontent{
+  z-index: 2;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+/*---------------------------------------------*/	
 </style>
 
 </head>
@@ -166,9 +178,15 @@ padding-top: 8px;height: 1220px;max-height: 1170px;background-color: black;
 
 
 <body>
-            
-          
-  <section>
+   
+<!---------------------------------------------------NEW VIDEO TAG FOR BACKGROUND & DIV-->
+<video autoplay muted loop id="myVideo">                   
+  <source src="videos/stars.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div class="allcontent"> 
+<!-------------------------------------------------->
+<section>
     <div class="container">                                          
         <div class="row" >
           
@@ -261,7 +279,7 @@ padding-top: 8px;height: 1220px;max-height: 1170px;background-color: black;
             
 
 </section> 
-
+</div>
 </div>
 
   
