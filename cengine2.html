@@ -225,9 +225,7 @@ canvas {
                        style=" font-weight: 500;
                                font-size: 16px;
                               color:black;
-                              font-family: 'Oxygen',sans-serif;" >
-    
-                       </textarea>
+                              font-family: 'Oxygen',sans-serif;" ></textarea>
 
                        <!-- <img style="float: right; width: 50px;margin-top: -50px;position: relative;"     onclick="startDictation()" src="../CodeGen/img/microphone.gif" />  -->
 
@@ -346,7 +344,8 @@ $(document).ready(function() {
 function myfun()                                                     /*nlptestjs.js*/
 {
   var q=document.getElementById('query').value;
-  document.getElementById('code').innerHTML=q;
+  document.getElementById('code').innerHTML="Loading...";
+  document.getElementById('output').innerHTML="Loading...";
   $.ajax({
       type:'POST',
       url:'http://therapybotvm.southeastasia.cloudapp.azure.com:8080/receiver',
