@@ -1,0 +1,104 @@
+*replace previous similar code with this.
+
+In CSS styling:
+
+<style>
+#opbody{
+    overflow-y: scroll;
+    height:360px;
+    max-height: 500px; 
+    margin-top:-200px;
+    background-color: #EAECEE;
+    border-radius: 5px;
+    border-style: solid;
+    border-left-color:  #1B2631;
+    margin-bottom: 100px;
+    font-size: 18px;
+}
+#codewindow{
+   
+    overflow-y: scroll;
+    height:360px; 
+    max-height: 500px;
+    margin-top:-200px;
+    background-color: #EAECEE; 
+    border-radius: 4px;
+    border-style: solid;
+    border-right-color:   #1B2631;
+    font-size: 15px;
+    margin-bottom: 200px;   
+    }
+ .prettyprint ol.linenums li { list-style-type: decimal; }
+ ol.linenums{
+  padding-left: 30px;
+ }
+
+</style>
+----------------------------------------------------------------------------
+*In HTML update this part only:
+
+<div class="text-center" id="codeoutput">
+ 
+ <div class=" col-md-6 "  id="codewindow"> <!--display:none;-->       
+       <div class="card">
+             <div class="card-body" >CODE</div>
+        </div>  
+     
+        <div id="code">
+               <!--The output will go here-->
+      <pre class="prettyprint linenums">import java.io.*;
+import java.util.*;
+
+public class out
+{    
+public static void main(String[] args)
+{
+        function obj = new function(); // Creating object of class containing all the functions
+        
+        double result_addition=-1;
+        ArrayList addition_data = new ArrayList(); //List to store data of addition operation
+     
+        addition_data.add((double)1);
+        addition_data.add((double)2);
+        addition_data.add((double)3);
+        addition_data.add((double)4);
+        
+        result_addition=obj.addition(addition_data); //Calling addition() function
+        System.out.println(result_addition);
+        
+}
+
+}
+//all the required functions are defined in this class
+class function{
+    
+
+    public double addition(ArrayList list)
+{
+double sum=0;
+for (double i:list)
+sum+=(double)i;
+return sum;
+}
+}</pre>
+        </div>   
+      </div>
+
+      <div class="col-md-6  text-center" id="opbody">
+         
+          <div class="card">
+             <div class="card-body" >OUTPUT</div>
+        </div>  
+            <div id="output" style="text-align: center;padding-top: 30px;color: black;">
+     
+               <!--The output will go here-->  
+      
+           </div>
+     
+     </div>
+           
+</div>   <!--jumbotron containing query and code-->
+--------------------------------------------------------------
+*add link in script:
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=js&amp;skin=default"></script>
